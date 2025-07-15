@@ -1,0 +1,375 @@
+<html class="scroll-smooth" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   AlraFantasy - Shop List
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f0a1a;
+      color: #d8caff;
+    }
+    /* Glowing button effect */
+    .btn-glow {
+      position: relative;
+      color: #d8caff;
+      border: 2px solid #9b59b6;
+      background: transparent;
+      transition: 0.3s ease;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .btn-glow:hover {
+      color: #fff;
+      background: #9b59b6;
+      box-shadow: 0 0 8px #9b59b6, 0 0 20px #9b59b6;
+    }
+    .btn-glow::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, #9b59b6, #6a0dad, #9b59b6, #6a0dad);
+      animation: glowing 20s linear infinite;
+      filter: blur(30px);
+      opacity: 0.7;
+      z-index: -1;
+      transition: opacity 0.3s ease;
+      border-radius: 8px;
+    }
+    .btn-glow:hover::before {
+      opacity: 1;
+    }
+    @keyframes glowing {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 400% 0;
+      }
+    }
+    /* Animated gradient text */
+    .gradient-text {
+      background: linear-gradient(90deg, #9b59b6, #6a0dad, #9b59b6);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientMove 5s ease infinite;
+    }
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    /* Animated floating orbs */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(12px);
+      opacity: 0.6;
+      animation: floatOrb 6s ease-in-out infinite alternate;
+      mix-blend-mode: screen;
+    }
+    @keyframes floatOrb {
+      0% {
+        transform: translateY(0) translateX(0);
+      }
+      100% {
+        transform: translateY(-20px) translateX(15px);
+      }
+    }
+  </style>
+ </head>
+ <body class="relative min-h-screen overflow-x-hidden">
+  <!-- Floating orbs background -->
+  <img alt="Glowing purple orb floating softly" class="orb w-48 h-48 top-10 left-10 animate-floatOrb" height="200" src="https://storage.googleapis.com/a1aa/image/daea9ccd-883d-47a1-d7b8-5ba4f30a0888.jpg" style="animation-delay: 0s; top: 3rem; left: 3rem;" width="200"/>
+  <img alt="Soft glowing violet orb floating gently" class="orb w-36 h-36" height="150" src="https://storage.googleapis.com/a1aa/image/db9c640b-158b-4f28-9260-6b163f9f7172.jpg" style="animation-delay: 2s; top: 10rem; right: 5rem; position: absolute;" width="150"/>
+  <img alt="Large glowing purple orb with soft blur" class="orb w-60 h-60" height="250" src="https://storage.googleapis.com/a1aa/image/1ea8a6ff-4314-4a7d-e71d-e5c35a0ec609.jpg" style="animation-delay: 4s; bottom: 5rem; left: 10rem; position: absolute;" width="250"/>
+  <img alt="Medium glowing purple orb floating slowly" class="orb w-44 h-44" height="180" src="https://storage.googleapis.com/a1aa/image/1f951288-666c-4b6e-ebed-af79a7fe5b8d.jpg" style="animation-delay: 1.5s; bottom: 8rem; right: 8rem; position: absolute;" width="180"/>
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-gradient-to-r from-purple-900 via-purple-800 to-purple-900 shadow-lg z-50">
+   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a class="flex items-center space-x-3 select-none" href="index.html">
+     <img alt="MC Premium Server logo, pixel art style purple Minecraft block with glowing edges" class="w-10 h-10 rounded-md shadow-lg" height="40" loading="lazy" src="https://cdn.discordapp.com/attachments/1297596752274395169/1392875548501348372/minecraft_title00.png?ex=68746bb1&is=68731a31&hm=e466d9259035f78b7035a2736485d0a120e24d0ef6f84552bbfb49d52678736d&" width="40"/>
+     <span class="text-2xl font-bold gradient-text">
+      Alra Fantasy Season 3 
+     </span>
+    </a>
+    <ul class="hidden md:flex space-x-8 text-purple-200 font-semibold">
+     <li>
+      <a class="hover:text-white transition" href="index.html#home">
+       Home
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-white transition" href="index.html#features">
+       Features
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-white transition" href="index.html#shop">
+       Shop
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-white transition" href="index.html#gallery">
+       Gallery
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-white transition" href="index.html#faq">
+       FAQ
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-white transition" href="index.html#contact">
+       Contact
+      </a>
+     </li>
+      <a class="block hover:text-white transition" href="#media">
+       Social
+    </ul>
+    <button class="md:hidden text-purple-300 hover:text-white focus:outline-none" id="mobile-menu-button">
+     <i class="fas fa-bars fa-lg">
+     </i>
+    </button>
+   </div>
+   <!-- Mobile menu -->
+   <div class="hidden md:hidden bg-purple-900/95" id="mobile-menu">
+    <ul class="flex flex-col space-y-4 p-6 text-purple-200 font-semibold">
+     <li>
+      <a class="block hover:text-white transition" href="index.html#home">
+       Home
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-white transition" href="index.html#features">
+       Features
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-white transition" href="index.html#shop">
+       Shop
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-white transition" href="index.html#gallery">
+       Gallery
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-white transition" href="index.html#faq">
+       FAQ
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-white transition" href="index.html#contact">
+       Contact
+      </a>
+     </li>
+      <a class="block hover:text-white transition" href="#media">
+       Social
+    </ul>
+   </div>
+  </nav>
+  <!-- Shop List Section -->
+  <section class="pt-24 max-w-7xl mx-auto px-6 pb-20 relative z-10" id="shop-list">
+   <h1 class="text-5xl font-extrabold gradient-text mb-12 text-center">
+    AlraFantasy Shop List
+   </h1>
+   <div class="bg-purple-900/70 rounded-3xl shadow-lg p-8">
+    <table class="w-full text-left text-purple-200 border-collapse">
+     <thead>
+      <tr class="border-b border-purple-700">
+       <th class="py-4 px-6 text-xl font-semibold">
+        Item
+       </th>
+       <th class="py-4 px-6 text-xl font-semibold">
+        Description
+       </th>
+       <th class="py-4 px-6 text-xl font-semibold">
+        Price
+       </th>
+       <th class="py-4 px-6 text-xl font-semibold">
+        Buy
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr class="border-b border-purple-800 hover:bg-purple-800/40 transition-colors cursor-pointer">
+       <td class="py-4 px-6 flex items-center space-x-4">
+        <img alt="VIP Rank badge glowing purple Minecraft icon" class="w-14 h-14 rounded-md shadow-md" height="56" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f24d814e-9d48-4676-843b-a429433dc264.jpg" width="56"/>
+        <span class="font-semibold text-lg">
+         VIP Rank
+        </span>
+       </td>
+       <td class="py-4 px-6 text-purple-300">
+        Unlock exclusive perks and commands to enhance your gameplay.
+       </td>
+       <td class="py-4 px-6 font-semibold text-purple-100">
+        $15.00
+       </td>
+       <td class="py-4 px-6">
+        <a class="btn-glow inline-block px-4 py-2 rounded-md font-semibold text-center w-full" href="https://mcpremium.net/shop/vip" rel="noopener noreferrer" target="_blank">
+         Buy Now
+        </a>
+       </td>
+      </tr>
+      <tr class="border-b border-purple-800 hover:bg-purple-800/40 transition-colors cursor-pointer">
+       <td class="py-4 px-6 flex items-center space-x-4">
+        <img alt="Cosmetics Minecraft items glowing purple icon" class="w-14 h-14 rounded-md shadow-md" height="56" loading="lazy" src="https://storage.googleapis.com/a1aa/image/5499a6e1-60f0-4294-61c8-c1db3630b3df.jpg" width="56"/>
+        <span class="font-semibold text-lg">
+         Cosmetics
+        </span>
+       </td>
+       <td class="py-4 px-6 text-purple-300">
+        Customize your character with unique hats, pets, and other cosmetics.
+       </td>
+       <td class="py-4 px-6 font-semibold text-purple-100">
+        $5.00 - $20.00
+       </td>
+       <td class="py-4 px-6">
+        <a class="btn-glow inline-block px-4 py-2 rounded-md font-semibold text-center w-full" href="https://mcpremium.net/shop/cosmetics" rel="noopener noreferrer" target="_blank">
+         Buy Now
+        </a>
+       </td>
+      </tr>
+      <tr class="border-b border-purple-800 hover:bg-purple-800/40 transition-colors cursor-pointer">
+       <td class="py-4 px-6 flex items-center space-x-4">
+        <img alt="Boosters Minecraft experience and resource icon glowing purple" class="w-14 h-14 rounded-md shadow-md" height="56" loading="lazy" src="https://storage.googleapis.com/a1aa/image/47cd554a-7aa1-46ac-00e3-7c9838394b24.jpg" width="56"/>
+        <span class="font-semibold text-lg">
+         Boosters
+        </span>
+       </td>
+       <td class="py-4 px-6 text-purple-300">
+        Increase your XP and resource gain for a limited time.
+       </td>
+       <td class="py-4 px-6 font-semibold text-purple-100">
+        $3.00 - $10.00
+       </td>
+       <td class="py-4 px-6">
+        <a class="btn-glow inline-block px-4 py-2 rounded-md font-semibold text-center w-full" href="https://mcpremium.net/shop/boosters" rel="noopener noreferrer" target="_blank">
+         Buy Now
+        </a>
+       </td>
+      </tr>
+      <tr class="border-b border-purple-800 hover:bg-purple-800/40 transition-colors cursor-pointer">
+       <td class="py-4 px-6 flex items-center space-x-4">
+        <img alt="Pets Minecraft magical glowing purple icon" class="w-14 h-14 rounded-md shadow-md" height="56" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c2a14887-32d1-4ea2-5186-74e81901d5b5.jpg" width="56"/>
+        <span class="font-semibold text-lg">
+         Pets
+        </span>
+       </td>
+       <td class="py-4 px-6 text-purple-300">
+        Adopt magical pets to accompany you on your adventures.
+       </td>
+       <td class="py-4 px-6 font-semibold text-purple-100">
+        $8.00 - $25.00
+       </td>
+       <td class="py-4 px-6">
+        <a class="btn-glow inline-block px-4 py-2 rounded-md font-semibold text-center w-full" href="https://mcpremium.net/shop/pets" rel="noopener noreferrer" target="_blank">
+         Buy Now
+        </a>
+       </td>
+      </tr>
+      <tr class="border-b border-purple-800 hover:bg-purple-800/40 transition-colors cursor-pointer">
+       <td class="py-4 px-6 flex items-center space-x-4">
+        <img alt="Minecraft special event ticket glowing purple icon" class="w-14 h-14 rounded-md shadow-md" height="56" loading="lazy" src="https://storage.googleapis.com/a1aa/image/9ad0e5f1-4938-47b4-a73e-9d48d46d6624.jpg" width="56"/>
+        <span class="font-semibold text-lg">
+         Event Pass
+        </span>
+       </td>
+       <td class="py-4 px-6 text-purple-300">
+        Access to exclusive server events and competitions.
+       </td>
+       <td class="py-4 px-6 font-semibold text-purple-100">
+        $12.00
+       </td>
+       <td class="py-4 px-6">
+        <a class="btn-glow inline-block px-4 py-2 rounded-md font-semibold text-center w-full" href="https://mcpremium.net/shop/eventpass" rel="noopener noreferrer" target="_blank">
+         Buy Now
+        </a>
+       </td>
+      </tr>
+      <tr class="border-b border-purple-800 hover:bg-purple-800/40 transition-colors cursor-pointer">
+       <td class="py-4 px-6 flex items-center space-x-4">
+        <img alt="Minecraft starter kit glowing purple icon with tools and armor" class="w-14 h-14 rounded-md shadow-md" height="56" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ce491050-5aed-4abd-41f8-2e9e9a780dc3.jpg" width="56"/>
+        <span class="font-semibold text-lg">
+         Starter Kit
+        </span>
+       </td>
+       <td class="py-4 px-6 text-purple-300">
+        Get a bundle of essential items to kickstart your adventure.
+       </td>
+       <td class="py-4 px-6 font-semibold text-purple-100">
+        $7.00
+       </td>
+       <td class="py-4 px-6">
+        <a class="btn-glow inline-block px-4 py-2 rounded-md font-semibold text-center w-full" href="https://mcpremium.net/shop/starterkit" rel="noopener noreferrer" target="_blank">
+         Buy Now
+        </a>
+       </td>
+      </tr>
+      <tr class="hover:bg-purple-800/40 transition-colors cursor-pointer">
+       <td class="py-4 px-6 flex items-center space-x-4">
+        <img alt="Minecraft land claim glowing purple icon with shield" class="w-14 h-14 rounded-md shadow-md" height="56" loading="lazy" src="https://storage.googleapis.com/a1aa/image/0b7c59f4-5313-45ac-e717-a6b6200cd553.jpg" width="56"/>
+        <span class="font-semibold text-lg">
+         Land Claim
+        </span>
+       </td>
+       <td class="py-4 px-6 text-purple-300">
+        Protect your builds by claiming land on the server.
+       </td>
+       <td class="py-4 px-6 font-semibold text-purple-100">
+        $10.00
+       </td>
+       <td class="py-4 px-6">
+        <a class="btn-glow inline-block px-4 py-2 rounded-md font-semibold text-center w-full" href="https://mcpremium.net/shop/landclaim" rel="noopener noreferrer" target="_blank">
+         Buy Now
+        </a>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-purple-900 text-purple-300 py-8 mt-16">
+   <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+    <p>
+     © 2025 Alra Fantasy.
+    </p>
+    <div class="flex space-x-6 text-xl">
+      </i>
+     </a>
+     <a aria-label="Discord" class="hover:text-white transition" href="https://discord.gg/bQBaf4PRSR" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-discord">
+      </i>
+     </a>
+    </div>
+   </div>
+  </footer>
+  <script>
+   // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+ </body>
+</html>

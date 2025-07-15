@@ -1,0 +1,433 @@
+<html class="scroll-smooth" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   AlraFantasy Webside
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f0a1a;
+      color: #d8caff;
+    }
+    /* Glowing button effect */
+    .btn-glow {
+      position: relative;
+      color: #d8caff;
+      border: 2px solid #9b59b6;
+      background: transparent;
+      transition: 0.3s ease;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .btn-glow:hover {
+      color: #fff;
+      background: #9b59b6;
+      box-shadow: 0 0 8px #9b59b6, 0 0 20px #9b59b6;
+    }
+    .btn-glow::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, #9b59b6, #6a0dad, #9b59b6, #6a0dad);
+      animation: glowing 20s linear infinite;
+      filter: blur(30px);
+      opacity: 0.7;
+      z-index: -1;
+      transition: opacity 0.3s ease;
+      border-radius: 8px;
+    }
+    .btn-glow:hover::before {
+      opacity: 1;
+    }
+    @keyframes glowing {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 400% 0;
+      }
+    }
+    /* Animated gradient text */
+    .gradient-text {
+      background: linear-gradient(90deg, #9b59b6, #6a0dad, #9b59b6);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientMove 5s ease infinite;
+    }
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    /* Animated floating orbs */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(12px);
+      opacity: 0.6;
+      animation: floatOrb 6s ease-in-out infinite alternate;
+      mix-blend-mode: screen;
+    }
+    @keyframes floatOrb {
+      0% {
+        transform: translateY(0) translateX(0);
+      }
+      100% {
+        transform: translateY(-20px) translateX(15px);
+      }
+    }
+  </style>
+ </head>
+ <body class="relative min-h-screen overflow-x-hidden">
+  <!-- Floating orbs background -->
+  <img alt="Glowing purple orb floating softly" class="orb w-48 h-48 top-10 left-10 animate-floatOrb" height="200" src="https://storage.googleapis.com/a1aa/image/daea9ccd-883d-47a1-d7b8-5ba4f30a0888.jpg" style="animation-delay: 0s; top: 3rem; left: 3rem;" width="200"/>
+  <img alt="Soft glowing violet orb floating gently" class="orb w-36 h-36" height="150" src="https://storage.googleapis.com/a1aa/image/db9c640b-158b-4f28-9260-6b163f9f7172.jpg" style="animation-delay: 2s; top: 10rem; right: 5rem; position: absolute;" width="150"/>
+  <img alt="Large glowing purple orb with soft blur" class="orb w-60 h-60" height="250" src="https://storage.googleapis.com/a1aa/image/1ea8a6ff-4314-4a7d-e71d-e5c35a0ec609.jpg" style="animation-delay: 4s; bottom: 5rem; left: 10rem; position: absolute;" width="250"/>
+  <img alt="Medium glowing purple orb floating slowly" class="orb w-44 h-44" height="180" src="https://storage.googleapis.com/a1aa/image/1f951288-666c-4b6e-ebed-af79a7fe5b8d.jpg" style="animation-delay: 1.5s; bottom: 8rem; right: 8rem; position: absolute;" width="180"/>
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-gradient-to-r from-purple-900 via-purple-800 to-purple-900 shadow-lg z-50">
+   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a class="flex items-center space-x-3 select-none" href="#home">
+     <img alt="MC Premium Server logo, pixel art style purple Minecraft block with glowing edges" class="w-10 h-10 rounded-md shadow-lg" height="40" loading="lazy" src="https://cdn.discordapp.com/attachments/1297596752274395169/1392875548501348372/minecraft_title00.png?ex=68746bb1&is=68731a31&hm=e466d9259035f78b7035a2736485d0a120e24d0ef6f84552bbfb49d52678736d&" width="40"/>
+     <span class="text-2xl font-bold gradient-text">
+      Alra Fantasy Season 3 
+     </span>
+    </a>
+    <ul class="hidden md:flex space-x-8 text-purple-200 font-semibold">
+     <li>
+      <a class="hover:text-white transition" href="#index">
+       Home
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-white transition" href="#features">
+       Features
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-white transition" href="#shop">
+       Shop
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-white transition" href="#gallery">
+       Gallery
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-white transition" href="#faq">
+       FAQ
+      </a>
+     </li>
+      <a class="block hover:text-white transition" href="index.html#contact">
+       Contact
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-white transition" href="media.html">
+       Social
+      </a>
+     </li>
+    </ul>
+    <button class="md:hidden text-purple-300 hover:text-white focus:outline-none" id="mobile-menu-button">
+     <i class="fas fa-bars fa-lg">
+     </i>
+    </button>
+   </div>
+   <!-- Mobile menu -->
+   <div class="hidden md:hidden bg-purple-900/95" id="mobile-menu">
+    <ul class="flex flex-col space-y-4 p-6 text-purple-200 font-semibold">
+     <li>
+      <a class="block hover:text-white transition" href="#home">
+       Home
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-white transition" href="#features">
+       Features
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-white transition" href="#shop">
+       Shop
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-white transition" href="#gallery">
+       Gallery
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-white transition" href="#faq">
+       FAQ
+      </a>
+     </li>
+      <a class="block hover:text-white transition" href="index.html#contact">
+       Contact
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-white transition" href="media.html">
+       Social
+      </a>
+     </li>
+    </ul>
+   </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="pt-24 pb-20 max-w-7xl mx-auto px-6 text-center relative z-10" id="home">
+   <h1 class="text-5xl md:text-6xl font-extrabold gradient-text mb-6 leading-tight">
+    Welcome to
+    <span class="text-white">
+     AlraId Fantasy 
+    </span>
+   </h1>
+   <p class="text-purple-300 max-w-3xl mx-auto mb-8 text-lg md:text-xl">
+    Alra fantasy ini adalah kelanjutan server alra legends season 2, dan semoga betah ya.
+   </p>
+   <div class="flex flex-col sm:flex-row justify-center items-center gap-6 max-w-md mx-auto">
+    <div class="bg-purple-900/70 rounded-lg p-6 w-full sm:w-auto flex flex-col items-center">
+     <p class="text-purple-400 mb-2 font-semibold">
+      Server IP
+     </p>
+     <div class="flex items-center space-x-3 select-all cursor-pointer" id="server-ip-container">
+      <span class="text-white font-mono text-xl" id="server-ip">
+       play.alramc.id
+      </span>
+      <button aria-label="Copy server IP" class="btn-glow px-4 py-2 rounded-md flex items-center space-x-2" id="copy-ip-btn">
+       <i class="fas fa-copy">
+       </i>
+       <span>
+        Copy
+       </span>
+      </button>
+      <a aria-label="Join our Discord server" class="btn-glow px-4 py-2 rounded-md flex items-center space-x-2" href="https://discord.gg/bQBaf4PRSR" rel="noopener noreferrer" target="_blank">
+       <i class="fab fa-discord fa-lg">
+       </i>
+       <span>
+        Discord
+       </span>
+      </a>
+     </div>
+    </div>
+      
+     </span>
+    </a>
+   </div>
+  </section>
+  <!-- Features Section -->
+  <section class="max-w-7xl mx-auto px-6 py-16" id="features">
+   <h2 class="text-4xl font-bold gradient-text mb-12 text-center">
+    Server Features
+   </h2>
+   <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <div class="bg-purple-900/70 rounded-xl p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300 shadow-lg">
+     <img alt="Custom Minecraft world with unique biomes and structures" class="mb-6 rounded-lg shadow-md" height="120" loading="lazy" src="https://static.wikia.nocookie.net/the-official-worldbox-wiki/images/4/47/Icon_randomShapes10x.png" width="120"/>
+     <h3 class="text-xl font-semibold mb-2">
+      Custom Worlds
+     </h3>
+     <p class="text-purple-300">
+      Jelajahi bioma yang unik dan struktur baru dan dunia yang luas. 
+     </p>
+    </div>
+    <div class="bg-purple-900/70 rounded-xl p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300 shadow-lg">
+     <img alt="Exclusive Minecraft items and gear glowing with purple aura" class="mb-6 rounded-lg shadow-md" height="120" loading="lazy" src="https://cdn.discordapp.com/attachments/1297596752274395169/1393921697203355738/637584172062782791.png?ex=6874ee3e&is=68739cbe&hm=24741a519b9bd6adf55ee8a9ccb39b05ba94fc35913d0e6ea2dc02716962c949&" width="120"/>
+     <h3 class="text-xl font-semibold mb-2">
+      Voice Chat
+     </h3>
+     <p class="text-purple-300">
+      Memakai voice chat, bisa berkomunikasi langsung sama player java edition.
+     </p>
+    </div>
+    <div class="bg-purple-900/70 rounded-xl p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300 shadow-lg">
+     <img alt="Minecraft players celebrating in a special event with fireworks" class="mb-6 rounded-lg shadow-md" height="120" loading="lazy" src="https://minecraft.wiki/images/Shulker_Box_JE1_BE1.png?3cfa4&20200317165111" width="120"/>
+     <h3 class="text-xl font-semibold mb-2">
+      Gacha item
+     </h3>
+     <p class="text-purple-300">
+      Dapatkan item menarik dan bahkan money server gratis, cukup menggunakan key gacha.
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- Shop Section -->
+  <section class="max-w-7xl mx-auto px-6 py-16 bg-gradient-to-b from-purple-900 to-purple-800 rounded-t-3xl shadow-lg" id="shop">
+   <h2 class="text-4xl font-bold gradient-text mb-12 text-center">
+    Shop Server Alra Fantasy
+   </h2>
+   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <div class="bg-purple-700 rounded-xl p-6 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300 shadow-lg">
+     <img alt="Minecraft VIP rank badge glowing purple" class="mb-4 rounded-lg shadow-md" height="150" loading="lazy" src="https://static.wikia.nocookie.net/the-official-worldbox-wiki/images/4/46/IconAchievements10x2.png" width="150"/>
+     <h3 class="text-lg font-semibold mb-2">
+      Rankss
+     </h3>
+     <p class="text-purple-300 mb-4">
+      Harga mulai dari 20.000.
+     </p>
+     <a class="btn-glow px-4 py-2 rounded-md inline-block w-full" href="ranks.html" rel="noopener noreferrer" target="_blank">
+      Click For List
+     </a>
+    </div>
+    <div class="bg-purple-700 rounded-xl p-6 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300 shadow-lg">
+     <img alt="Minecraft cosmetic items like hats and pets glowing purple" class="mb-4 rounded-lg shadow-md" height="150" loading="lazy" src="https://static.wikia.nocookie.net/the-official-worldbox-wiki/images/b/bf/Achievement_not_just_a_cult10x.png" width="150"/>
+     <h3 class="text-lg font-semibold mb-2">
+      Credit / Points
+     </h3>
+     <p class="text-purple-300 mb-4">
+      Harga mulai dari 5.000.
+     </p>
+     <a class="btn-glow px-4 py-2 rounded-md inline-block w-full" href="credit.html" rel="noopener noreferrer" target="_blank">
+      Click For List
+     </a>
+    </div>
+    <div class="bg-purple-700 rounded-xl p-6 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300 shadow-lg">
+     <img alt="Minecraft experience and resource boosters glowing purple" class="mb-4 rounded-lg shadow-md" height="150" loading="lazy" src="https://static.wikia.nocookie.net/the-official-worldbox-wiki/images/6/6c/Achievement_eternal_chaos10x.png" width="150"/>
+     <h3 class="text-lg font-semibold mb-2">
+      Key Gacha
+     </h3>
+     <p class="text-purple-300 mb-4">
+      Harga mulai dari 15.000. 
+     </p>
+     <a class="btn-glow px-4 py-2 rounded-md inline-block w-full" href="gacha.html" rel="noopener noreferrer" target="_blank">
+      Click For List
+     </a>
+    </div>
+    <div class="bg-purple-700 rounded-xl p-6 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300 shadow-lg">
+     <img alt="Minecraft pets glowing purple with magical aura" class="mb-4 rounded-lg shadow-md" height="150" loading="lazy" src="https://static.wikia.nocookie.net/the-official-worldbox-wiki/images/d/de/Achievements_printHeart.png" width="150"/>
+     <h3 class="text-lg font-semibold mb-2">
+      Donasi / paymant
+     </h3>
+     <p class="text-purple-300 mb-4">
+      Tempat pembayaran / donasi.
+     </p>
+     <a class="btn-glow px-4 py-2 rounded-md inline-block w-full" href="https://sociabuzz.com/alralegends/tribe" rel="noopener noreferrer" target="_blank">
+      Click For Donasi
+     </a>
+    </div>
+   </div>
+  </section>
+  <!-- Gallery Section -->
+  <section class="max-w-7xl mx-auto px-6 py-16" id="gallery">
+   <h2 class="text-4xl font-bold gradient-text mb-12 text-center">
+    Gallery Server AlraFantasy
+   </h2>
+   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <img alt="Epic Minecraft castle build with purple stained glass and towers" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer" height="250" loading="lazy" src="https://cdn.discordapp.com/attachments/1297596752274395169/1394618281620668477/2025-07-04_19.23.18.png?ex=687776fd&is=6876257d&hm=fd8f8e73cbd563ab04e7a0ecd0e3daadb3de20233065f2492680fd797472b431&" width="400"/>
+    <img alt="Minecraft PvP arena glowing with purple lights and banners" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer" height="250" loading="lazy" src="https://cdn.discordapp.com/attachments/1297596752274395169/1394618282098561105/2025-07-05_18.57.22.png?ex=687776fd&is=6876257d&hm=156611a02bf9e3715deedcc1151cfd4f837a43e4cbac7e75750ecaa26baadf34&" width="400"/>
+    <img alt="Minecraft community event with players and fireworks in purple theme" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer" height="250" loading="lazy" src="https://cdn.discordapp.com/attachments/1297596752274395169/1394618283361308722/2025-07-10_10.08.10.png?ex=687776fd&is=6876257d&hm=ff86edae3dbf6d3015d7dab5b4161ef85f402643703ed14bbcda974eb6e29bfe&" width="400"/>
+    <img alt="Minecraft nether portal surrounded by purple glowing crystals" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer" height="250" loading="lazy" src="https://cdn.discordapp.com/attachments/1297596752274395169/1394618333625847838/2025-07-01_09.11.13.png?ex=68777709&is=68762589&hm=1535d3a40ce28cbea20bf15f518b27f7705435e9a5c2986170c78a36bd4e3a5d&" width="400"/>
+   </div>
+  </section>
+  <!-- FAQ Section -->
+  <section class="max-w-7xl mx-auto px-6 py-16 bg-purple-900/70 rounded-3xl shadow-lg" id="faq">
+   <h2 class="text-4xl font-bold gradient-text mb-12 text-center">
+    Frequently Asked Questions
+   </h2>
+   <div class="max-w-4xl mx-auto space-y-6 text-purple-200">
+    <details class="bg-purple-800/50 rounded-lg p-5 cursor-pointer hover:bg-purple-700 transition">
+     <summary class="font-semibold text-lg select-none">
+      Bagaimana cara masuk ke dalam server nya? 
+     </summary>
+     <p class="mt-3 text-purple-300">
+      Masuk ke dalam multyplayer dan masukan ip ini
+      <span class="font-mono text-white">
+       play.alramc.id / 25565
+      </span>
+      untuk bedrock menggunakan port 25565 untuk java tidak usah.
+     </p>
+    </details>
+    <details class="bg-purple-800/50 rounded-lg p-5 cursor-pointer hover:bg-purple-700 transition">
+     <summary class="font-semibold text-lg select-none">
+      Server ini di bangun tahun berapa dan tanggal berapa?
+     </summary>
+     <p class="mt-3 text-purple-300">
+      Server ini di bangun 2024 dan tanggal 8, tema server awal ini adalah roleplay bruatl legends.
+     </p>
+    </details>
+    <details class="bg-purple-800/50 rounded-lg p-5 cursor-pointer hover:bg-purple-700 transition">
+     <summary class="font-semibold text-lg select-none">
+      Metode pembayaran apa yang Anda terima?
+     </summary>
+     <p class="mt-3 text-purple-300">
+      Kami menerima gopay, dana, dan pembayaran melalui socialbuzz.
+     </p>
+    </details>
+    <details class="bg-purple-800/50 rounded-lg p-5 cursor-pointer hover:bg-purple-700 transition">
+     <summary class="font-semibold text-lg select-none">
+      Apakah ada event?
+     </summary>
+     <p class="mt-3 text-purple-300">
+      Ya, kami menyelenggarakan event mingguan ataupun bulanan dengan hadiah eksklusif dan tantangan komunitas.
+     </p>
+    </details>
+   </div>
+  </section>
+  <!-- Contact Section -->
+  <section class="max-w-7xl mx-auto px-6 py-16 text-center" id="contact">
+   <h2 class="text-4xl font-bold gradient-text mb-8">
+    Contact Us
+   </h2>
+   <p class="text-purple-300 max-w-2xl mx-auto mb-8">
+    Have questions or need support? Reach out to our team anytime.
+   </p>
+   <a class="btn-glow inline-block px-8 py-3 rounded-md font-semibold text-lg" href="alralegends@gmail.com">
+    <i class="fas fa-envelope mr-2">
+    </i>
+    Email Support
+   </a>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-purple-900 text-purple-300 py-8 mt-16">
+   <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+    <p>
+     © 2025 Alra Fantasy.
+    </p>
+
+     <a aria-label="Discord" class="hover:text-white transition" href="https://discord.gg/bQBaf4PRSR" rel="noopener noreferrer" target="_blank">
+      <i class="fab fa-discord">
+      </i>
+     </a>
+
+    </div>
+   </div>
+  </footer>
+  <script>
+   // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Copy IP button functionality
+    const copyBtn = document.getElementById('copy-ip-btn');
+    const serverIp = document.getElementById('server-ip').textContent;
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(serverIp).then(() => {
+        copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        setTimeout(() => {
+          copyBtn.innerHTML = '<i class="fas fa-copy"></i> <span>Copy IP</span>';
+        }, 2000);
+      }).catch(() => {
+        alert('Failed to copy IP. Please copy manually.');
+      });
+    });
+  </script>
+ </body>
+</html>
